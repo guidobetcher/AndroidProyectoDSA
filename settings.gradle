@@ -1,0 +1,2 @@
+include ':app', ':juegoprueba-debug'
+rootProject.name='prueba para unity'
