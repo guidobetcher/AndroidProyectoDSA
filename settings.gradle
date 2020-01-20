@@ -1,2 +1,2 @@
-include ':app', ':juego-debug', ':juegoprueba-debug', ':juegoprueba2-debug', ':juegoprueba3-debug'
+include ':app', ':juego-debug', ':juegoprueba-debug', ':juegoprueba2-debug', ':juegoprueba3-debug', ':juegoprueba4-debug'
 rootProject.name='prueba para unity'

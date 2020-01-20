@@ -3,13 +3,14 @@ package com.ejemplo.pruebaparaunity;
 import com.unity3d.player.UnityPlayer;
 
 public class GameAttributes {
-    int gifts, reindeers, level;
+    int gifts, level;
     float time;
+    String iduser;
 
-    public GameAttributes(int gifts, int reindeers, int level, float time) {
+    public GameAttributes(int gifts, String iduser, int level, float time) {
         this.gifts = gifts;
         this.level = level;
-        this.reindeers = reindeers;
+        this.iduser = iduser;
         this.time = time;
     }
 

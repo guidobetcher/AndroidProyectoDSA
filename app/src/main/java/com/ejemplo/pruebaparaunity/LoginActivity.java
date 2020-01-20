@@ -42,12 +42,10 @@ public class LoginActivity extends AppCompatActivity {
 
         if (preferenceHelper.getIsLogin()) {
             Intent intent = new Intent(LoginActivity.this, GameActivity.class);
-            intent.putExtra("username", player.getUsername());
             intent.putExtra("time", player.getTime());
             intent.putExtra("level", player.getLevel());
             intent.putExtra("gifts", player.getGifts());
             intent.putExtra("reindeers", player.getRenos());
-            intent.putExtra("password", player.getPassword());
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
             this.finish();
@@ -61,15 +59,14 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                loginUser();
+                //loginUser();
                 Intent intent = new Intent(LoginActivity.this, GameActivity.class);
-                intent.putExtra("username", player.getUsername());
                 intent.putExtra("time", player.getTime());
                 intent.putExtra("level", player.getLevel());
                 intent.putExtra("gifts", player.getGifts());
                 intent.putExtra("reindeers", player.getRenos());
-                intent.putExtra("password", player.getPassword());
                 startActivity(intent);
+                LoginActivity.this.finish();
             }
         });
     }
@@ -99,13 +96,11 @@ public class LoginActivity extends AppCompatActivity {
 
                         Toast.makeText(LoginActivity.this, "Login Successfully!", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(LoginActivity.this, GameActivity.class);
-                        intent.putExtra("username", jsonresponse.getUsername());
-                        ;
+
                         intent.putExtra("time", jsonresponse.getTime());
                         intent.putExtra("level", jsonresponse.getLevel());
                         intent.putExtra("gifts", jsonresponse.getGifts());
                         intent.putExtra("reindeers", jsonresponse.getRenos());
-                        intent.putExtra("password", jsonresponse.getPassword());
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent);
                     } else {
