@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.proyecto.juegoprueba4.UnityPlayerActivity;
+import com.proyecto.juegoprueba.UnityPlayerActivity;
 
 public class GameActivity extends UnityPlayerActivity {
 

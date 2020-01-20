@@ -13,7 +13,7 @@ import retrofit2.http.Path;
 public interface RestAPI {
     String BASE_URL = "https://147.83.7.205:8080/dsaApp/";
 
-    @POST("login/signin/")
+    @POST("auth/signin/")
     Call<Jugador> userLogin(@Path("username") String username,
                             @Path("password") String password);
 
