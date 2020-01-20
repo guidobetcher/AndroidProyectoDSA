@@ -89,7 +89,15 @@ public class GameActivity extends UnityPlayerActivity {
         Log.i("gameAttributesTime", String.valueOf(gameAttributes.getTime()));
         Log.i("gameAttributesGifts", String.valueOf(gameAttributes.getGifts()));
         Log.i("gameAttributesLevel", String.valueOf(gameAttributes.getLevel()));
-
-        return gameAttributes;
+        GameAttributes ga = new GameAttributes(this.gameAttributes.getGifts(),this.gameAttributes.getLevel(), this.gameAttributes.getTime());
+        return ga;
+    }
+    public void actualiseStats(String stringStats)
+    {
+        GameAttributes attributes = new GameAttributes();
+        String[] trozos = stringStats.split(",");
+        attributes.setLevel(Integer.parseInt(trozos[0]));
+        attributes.setTime(Float.parseFloat(trozos[1]));
+        attributes.setGifts(Integer.parseInt(trozos[2]));
     }
 }

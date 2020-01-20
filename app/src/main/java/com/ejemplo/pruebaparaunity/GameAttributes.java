@@ -5,12 +5,10 @@ import com.unity3d.player.UnityPlayer;
 public class GameAttributes {
     int gifts, level;
     float time;
-    String iduser;
 
-    public GameAttributes(int gifts, String iduser, int level, float time) {
+    public GameAttributes(int gifts, int level, float time) {
         this.gifts = gifts;
         this.level = level;
-        this.iduser = iduser;
         this.time = time;
     }
 
@@ -27,6 +25,7 @@ public class GameAttributes {
     public float getTime() {return time;}
 
     public void setTime(float time) {this.time = time;}
+
 
     @Override
     public String toString() {
